@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="sidebar-title">Library</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" id="dashboard-link" class="active">Dashboard</a></li>
+                    <li>
+                        <a href="#" id="categories-link">Categories</a>
+                        <ul class="submenu" id="categories-submenu">
+                            <li><a href="#" data-category="Novel">Novel</a></li>
+                            <li><a href="#" data-category="Self Help">Self Help</a></li>
+                            <li><a href="#" data-category="History">History</a></li>
+                            <li><a href="#" data-category="Comics">Comics</a></li>
+                            <li><a href="#" data-category="Fiction">Fiction</a></li>
+                            <li><a href="#" data-category="Non-Fiction">Non-Fiction</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="languages-link">Languages</a>
+                        <ul class="submenu" id="languages-submenu">
+                            <li><a href="#" data-language="English">English</a></li>
+                            <li><a href="#" data-language="Kannada">Kannada</a></li>
+                            <li><a href="#" data-language="Hindi">Hindi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="add-book-link">Add Book</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="main-content">
+            <header class="navbar">
+                <h1>Library Management System</h1>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search by title or author...">
+                    <button id="random-suggest">Random Book</button>
+                </div>
+            </header>
+            <main id="content-area">
+                <!-- Dynamic content will be loaded here -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal for book details -->
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p><strong>Author:</strong> <span id="modal-author"></span></p>
+            <p><strong>Category:</strong> <span id="modal-category"></span></p>
+            <p><strong>Language:</strong> <span id="modal-language"></span></p>
+            <p><strong>Published Year:</strong> <span id="modal-year"></span></p>
+            <p><strong>Description:</strong></p>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
